@@ -1,4 +1,4 @@
-package com.swat.pages;
+package com.swat.pages.Examples;
 
 import com.swat.BasePage;
 import com.swat.data.UserData;

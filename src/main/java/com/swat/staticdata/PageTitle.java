@@ -8,6 +8,7 @@ public enum PageTitle {
 	ADMIN_ADD_MEMBER("Membership Management"), //
 	ADMIN_EDIT_MEMBER("Membership Management"), // 
 	ADMIN_VIEW_MEMBER_PAGE("Membership Management"), //
+	MAIN_PAGE_RU("Русский 1 @"), // main page in russian
 	;
 
 	private String titleValue;

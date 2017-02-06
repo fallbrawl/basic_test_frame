@@ -1,7 +1,7 @@
 package com.swat;
 
 import com.swat.data.UserData;
-import com.swat.pages.*;
+import com.swat.pages.Examples.*;
 import org.openqa.selenium.WebDriver;
 
 public class AdminSteps extends BaseStep {

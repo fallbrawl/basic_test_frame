@@ -24,7 +24,6 @@ public class PageFactoryEx {
 		PageFactory.initElements(factory, container);
 		initContainers(factory, driver, container);
 		return container;
-
 	}
 
 	private static <T> void initContainers(ElementLocatorFactory factory, WebDriver driver, T container) {

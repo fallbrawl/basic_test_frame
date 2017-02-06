@@ -2,8 +2,8 @@ package com.swat.example.tests;
 
 import com.swat.BasePage;
 import com.swat.data.UserData;
-import com.swat.pages.AdminHomePage;
-import com.swat.pages.AdminLoginPage;
+import com.swat.pages.Examples.AdminHomePage;
+import com.swat.pages.Examples.AdminLoginPage;
 import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertTrue;

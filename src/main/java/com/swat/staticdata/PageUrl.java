@@ -7,6 +7,7 @@ public enum PageUrl  {
 	ADMIN_ADD_MEMBER("http://cells.org.ua/scrum-selenium/admin/pageEditMember.php"), //
 	ADMIN_EDIT_MEMBER("http://cells.org.ua/scrum-selenium/admin/pageEditMember.php?memberID=%s"), // 
 	ADMIN_VIEW_MEMBER_PAGE("http://cells.org.ua/scrum-selenium/admin/pageViewMembers.php"), //
+	MAIN_PAGE("http://tomato.php-cd.attractgroup.com/"),//
 	;
 
 	private String urlValue;
