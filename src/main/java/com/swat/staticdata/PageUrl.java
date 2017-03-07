@@ -8,7 +8,10 @@ public enum PageUrl  {
 	ADMIN_EDIT_MEMBER("http://cells.org.ua/scrum-selenium/admin/pageEditMember.php?memberID=%s"), // 
 	ADMIN_VIEW_MEMBER_PAGE("http://cells.org.ua/scrum-selenium/admin/pageViewMembers.php"), //
 	MAIN_PAGE("http://tomato.php-cd.attractgroup.com/"),//
+	BACKEND_LOGIN_PAGE("http://tomato.php-cd.attractgroup.com/backend/login"),//
 	;
+
+	//TODO Разобраться с перечислениями: добавить константу для установки адреса сервака на котором проводятся тесты
 
 	private String urlValue;
 

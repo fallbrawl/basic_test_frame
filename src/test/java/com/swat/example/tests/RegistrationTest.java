@@ -5,4 +5,5 @@ package com.swat.example.tests;
  */
 public class RegistrationTest extends BaseTestCase {
 
+
 }

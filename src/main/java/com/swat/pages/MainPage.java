@@ -15,10 +15,6 @@ public class MainPage extends BasePage {
     @FindBy (className = "header_sign_in")
     WebElement btnSignIn;
 
-    public MainPage(WebDriver driver, PageTitle title, PageUrl pageUrl) {
-        super(driver, title, pageUrl);
-    }
-
     public MainPage(WebDriver driver) {
         super(driver, PageTitle.MAIN_PAGE_RU, PageUrl.MAIN_PAGE);
     }
