@@ -62,7 +62,7 @@ public class HttpActions {
     return response.getStatusLine().getStatusCode();
   }
 
-  private static DefaultHttpClient getHttpClient() {
+    private static DefaultHttpClient getHttpClient() {
     if (httpClient == null) {
       PoolingClientConnectionManager cm = new PoolingClientConnectionManager();
       cm.setMaxTotal(100);
@@ -71,6 +71,7 @@ public class HttpActions {
     return httpClient;
   }
 
+  
   public static void main(String[] args) throws IOException {
     //Test Remove function
     HttpActions.removeMember("tester151762463");
