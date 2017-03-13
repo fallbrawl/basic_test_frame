@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 /**
- * Created by paul on 30.01.17.
+ * Created by paul on 30.01.17
  */
 public class MainPage extends BasePage {
 
