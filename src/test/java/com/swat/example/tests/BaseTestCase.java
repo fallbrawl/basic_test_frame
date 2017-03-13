@@ -45,7 +45,8 @@ public abstract class BaseTestCase {
 		if (driver == null) {
 			String browser = TestProperties.getTestProperty("browser");
 			if ("firefox".equals(browser)) {
-				System.setProperty("webdriver.gecko.driver","/home/paul/selenium/selenium-2.48.2/geckodriver");
+/*				System.setProperty("webdriver.gecko.driver","/home/paul/selenium/selenium-2.48.2/geckodriver"); */
+				System.setProperty("webdriver.gecko.driver","/home/dev/selenium/geckodriver");				
 				DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 				capabilities.setCapability("marionette", false);
 				driver = new FirefoxDriver(capabilities);
