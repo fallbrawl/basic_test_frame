@@ -11,8 +11,7 @@ public enum PageTitle {
 
 	MAIN_PAGE_RU("Tomato"), //
 	BACKEND_LOGIN_PAGE("Tomato Backend Login"), //
-	ADMIN_MAIN_PAGE("Tomato Backend") //
-	;
+	ADMIN_MAIN_PAGE("Tomato Backend") ;
 
 	private String titleValue;
 
