@@ -14,7 +14,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<selenium-version>3.0.1</selenium-version>
 		<testng-version>6.4</testng-version>
-		<java-version>1.6</java-version>
+		<java-version>1.8</java-version>
 		<suite.file>ui-smoke-suite.xml</suite.file>
 		<screenshot.path>${project.build.directory}/surefire-reports/screenshots/</screenshot.path>
 	</properties>
@@ -33,7 +33,10 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<inherited>true</inherited>
 				<configuration>
-					<argLine>-Xmx1024m -Xms128M -XX:MaxPermSize=128M -DscreenshotPath=${screenshot.path} -Dintegra=${integra}</argLine>
+
+<!-- 			<argLine>-Xmx1024m -Xms128M -XX:MaxPermSize=128M -DscreenshotPath=${screenshot.path} -Dintegra=${integra}</argLine>   -->
+    			<argLine>-Xmx1024m -Xms128M -XX:MaxPermSize=128M -DscreenshotPath=${screenshot.path}</argLine>
+
 					<suiteXmlFiles>
 						<suiteXmlFile>${suite.file}</suiteXmlFile>
 					</suiteXmlFiles>
