@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class Form extends AbstractContainer {
 
-	@FindBy(xpath = "//form")
+	@FindBy(xpath = ".//form")
 	private WebElement context;
 
 	public Form(WebDriver driver) {

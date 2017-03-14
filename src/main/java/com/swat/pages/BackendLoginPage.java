@@ -1,10 +1,8 @@
 package com.swat.pages;
 
 import com.swat.BasePage;
-import com.swat.data.UserData;
 import com.swat.staticdata.PageTitle;
 import com.swat.staticdata.PageUrl;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,10 +23,10 @@ public class BackendLoginPage extends BasePage {
    	}
 	
 	//Set email and password in textbox and click on button
-	public AdminMainPage loginAs(UserData admin) {
-		getForm().set(email, admin.getName()).set(password, admin.getPassword()).submit();
-		return BasePage.create(driver, AdminMainPage.class);
-	}	
+//	public AdminMainPage loginAs(UserData admin) {
+//		getForm().set(email, admin.getName()).set(password, admin.getPassword()).submit();
+//		return BasePage.create(driver, AdminMainPage.class);
+//	}
 	
 }
 

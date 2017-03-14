@@ -27,12 +27,12 @@ public class AddMemberTest extends BaseTestCase {
 		steps.openAddNewMember();
 		steps.addMember(newMember);
 		asserts.thatEditUserPageOpened();
-		asserts.thatUserPresentInViewMembers(newMember.getName());
+		asserts.thatUserPresentInViewMembers(newMember.getEmail());
 	}
 	
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() throws IOException {
-    HttpActions.removeMember(newMember.getName());
+    HttpActions.removeMember(newMember.getEmail());
 	}
 
 }
