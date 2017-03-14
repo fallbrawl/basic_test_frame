@@ -23,7 +23,7 @@ public class AddMemberPage extends BasePage {
 	}
 
 	public AddMemberPage fillmemberForAs(UserData newMember) {
-		getForm().set("memberID", newMember.getName())
+		getForm().set("memberID", newMember.getEmail())
 		.set("password", newMember.getPassword())
 		.set("confirmPassword", newMember.getPassword());
 		return this;

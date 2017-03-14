@@ -13,7 +13,7 @@ public class AdminLoginPage extends BasePage {
 	}
 
 	public AdminHomePage loginAs(UserData admin) {
-		getForm().set("username", admin.getName()).set("password", admin.getPassword()).submit();
+		getForm().set("username", admin.getEmail()).set("password", admin.getPassword()).submit();
 		return BasePage.create(driver, AdminHomePage.class);
 	}
 

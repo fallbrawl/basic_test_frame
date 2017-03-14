@@ -1,7 +1,7 @@
 package com.swat.example.tests;
 
 import com.swat.BasePage;
-import com.swat.pages.MainPage;
+import com.swat.pages.MainPage.MainPage;
 import org.testng.annotations.Test;
 
 /**
@@ -15,7 +15,5 @@ public class TestSmth extends BaseTestCase {
     public void doSmth(){
         mainPage.open();
         System.out.print(getDriver().getCurrentUrl());
-
-        mainPage.showMe();
     }
 }
