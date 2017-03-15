@@ -13,8 +13,8 @@ import org.testng.annotations.Test;
  */
 public class UserAuthorizeTest extends BaseTestCase {
 
-    final static String userName = "eede";
-    private UserData user = new UserData("herdemisemyrise.bt@gmail.com", "111111");
+    final static String userName = "First";
+    private UserData user = new UserData("test1@test1.test1", "111111");
 
     @Test
 
