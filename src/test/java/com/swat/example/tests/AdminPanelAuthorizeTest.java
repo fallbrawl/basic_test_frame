@@ -3,10 +3,14 @@ package com.swat.example.tests;
 import com.swat.BasePage;
 import com.swat.data.UserData;
 import com.swat.pages.BackendLoginPage;
+import com.swat.pages.AdminMainPage;
+
+import static org.testng.Assert.assertTrue;
+
 import org.testng.annotations.Test;
 
 /**
- * Created by paul on 07.03.17.
+ * Created by Alex on 10.03.17.
  */
 
 public class AdminPanelAuthorizeTest extends BaseTestCase {
@@ -17,8 +21,8 @@ public class AdminPanelAuthorizeTest extends BaseTestCase {
     	BackendLoginPage backendLoginPage = BasePage.create(getDriver(),BackendLoginPage.class);
         backendLoginPage.open();
         
-//		AdminMainPage adminMainPage = backendLoginPage.loginAs(admin);
-//		assertTrue(adminMainPage.isLoggedIn().contains("Name Surname"));
+		AdminMainPage adminMainPage = backendLoginPage.loginAs(admin);
+		assertTrue(adminMainPage.isLoggedIn().contains("Name Surname"));
            
     }
 
