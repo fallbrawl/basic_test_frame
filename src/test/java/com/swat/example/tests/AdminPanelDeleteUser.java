@@ -6,6 +6,10 @@ import com.swat.BasePage;
 import com.swat.data.UserData;
 import com.swat.pages.AdminMainPage;
 
+/**
+ * Created by Alex on 13.03.17.
+ */
+
 public class AdminPanelDeleteUser extends BaseTestCase {
 
 //  private UserData email = new UserData("test1@test1.test1");
