@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
  */
 public class UserRegistrationTest extends BaseTestCase {
 
-    private UserData user = new UserData("First", "Last", "emor54@i.ua", "111111");
+    private UserData user = new UserData("First", "Last", "test1@test1.test1", "111111");
 
     @Test
 
