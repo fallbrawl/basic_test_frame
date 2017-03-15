@@ -13,10 +13,10 @@ import com.swat.staticdata.PageUrl;
 
 public class AdminMainPage extends BasePage {
 
-	@FindBy(xpath = "/html/body/div[2]/div[2]/div/div[1]/div[2]/div/div/b")
+	@FindBy(id = "admin5")
 	private WebElement userNameSurname;
 
-	@FindBy(xpath = "/html/body/div[2]/div[3]/div/div/div/div[2]/div[1]/div/input")
+	@FindBy(id = "admin6")
 	private WebElement searchInput;	
 	
 	@FindBy(xpath = "/html/body/div[2]/div[3]/div/div/div/div[2]/div[4]/table/tbody/tr/td[3]")
@@ -52,7 +52,7 @@ public class AdminMainPage extends BasePage {
 	}	
     //Check the user is found
 	public Boolean isUserFound() {
-		return (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+		return (new WebDriverWait(driver, 20)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
                 return emailUserFound.getText().contains("test1@test1.test1");
             }
