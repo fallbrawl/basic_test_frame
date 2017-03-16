@@ -4,6 +4,8 @@ import com.swat.BasePage;
 import com.swat.data.UserData;
 import com.swat.staticdata.PageTitle;
 import com.swat.staticdata.PageUrl;
+
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -71,32 +73,34 @@ public class RegistrationFormMainPage extends BasePage {
     public void registerAs(UserData user) throws InterruptedException {
 
         getForm().set(fieldFirstName, user.getFirstName());
-        Thread.sleep(1000);
+        Thread.sleep(500);
         getForm().set(fieldLastName, user.getLastName());
-        Thread.sleep(1000);
+        Thread.sleep(500);
         getForm().set(fieldEmail, user.getEmail());
-        Thread.sleep(1000);
+        Thread.sleep(500);
         getForm().set(fieldPassword, user.getPassword());
-        Thread.sleep(1000);
+        Thread.sleep(500);
         getForm().set(fieldPhone, user.getTelephoneNumber());
-        Thread.sleep(1000);
+        Thread.sleep(500);
 
         if (user.getSex().equals("female")) checkBoxFemaleSex.click();
 
         dropdownDayOfBirth.click();
         getForm().set(textFieldDayOfBirth, user.getDayOfBirth());
-        Thread.sleep(1000);
+		textFieldDayOfBirth.sendKeys(Keys.ENTER);
+        Thread.sleep(500);
 
         dropdownMonthOfBirth.click();
         getForm().set(textFieldMonthOfBirth, user.getMonthOfBirth());
-        Thread.sleep(1000);
+        textFieldMonthOfBirth.sendKeys(Keys.ENTER);
+        Thread.sleep(500);
 
         dropdownYearOfBirth.click();
         getForm().set(textFieldYearOfBirth, user.getYearOfBirth());
-        Thread.sleep(1000);
+        textFieldYearOfBirth.sendKeys(Keys.ENTER);        
+        Thread.sleep(500);
 
         getForm().submit();
 
-        buttonConfirmRegistration.click();
     }
 }
