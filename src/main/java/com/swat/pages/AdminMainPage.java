@@ -19,16 +19,20 @@ public class AdminMainPage extends BasePage {
 	@FindBy(id = "admin6")
 	private WebElement searchInput;	
 	
-	@FindBy(xpath = "/html/body/div[2]/div[3]/div/div/div/div[2]/div[4]/table/tbody/tr/td[3]")
+//	@FindBy(xpath = "/html/body/div[2]/div[3]/div/div/div/div[2]/div[4]/table/tbody/tr/td[3]")
+	@FindBy(xpath = "//table/tbody/tr/td[3]")	
 	private WebElement emailUserFound;	
 	
-	@FindBy(xpath = "/html/body/div[2]/div[3]/div/div/div/div[2]/div[4]/table/tbody/tr/td[9]/div/a[3]/i")
+//	@FindBy(xpath = "/html/body/div[2]/div[3]/div/div/div/div[2]/div[4]/table/tbody/tr/td[9]/div/a[3]/i")
+	@FindBy(xpath = "//table/tbody/tr/td[9]/div/a[3]/i")
 	private WebElement deleteButton;	
 	
-	@FindBy(xpath = "/html/body/div[2]/div[3]/div/div/div/div[2]/div[4]/table/tbody/tr/td[9]/div/div[2]/div/div/div[3]/button[2]")
+//	@FindBy(xpath = "/html/body/div[2]/div[3]/div/div/div/div[2]/div[4]/table/tbody/tr/td[9]/div/div[2]/div/div/div[3]/button[2]")
+	@FindBy(xpath = "//table/tbody/tr/td[9]/div/div[2]/div/div/div[3]/button[2]")
 	private WebElement confirmButton;	
 	
-	@FindBy(xpath = "/html/body/div[2]/div[3]/div/div/div/div[2]/div[4]/table/tbody/tr/td")
+//	@FindBy(xpath = "/html/body/div[2]/div[3]/div/div/div/div[2]/div[4]/table/tbody/tr/td")
+	@FindBy(xpath = "//table/tbody/tr/td")	
 	private WebElement dataNotFound;	
 	
 	
