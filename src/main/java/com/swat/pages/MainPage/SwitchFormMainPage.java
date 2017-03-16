@@ -14,19 +14,25 @@ public class SwitchFormMainPage extends BasePage {
 
     BasePage switchVariantPage;
 
-    @FindBy(className = "col2")
-    WebElement btnSignViaEmail;
+    //socials
 
-    @FindBy(className = "login_google")
+    @FindBy(id = "front11")
     WebElement btnLoginGoogle;
 
-    @FindBy(className = "login_vk")
+    @FindBy(id = "front10")
     WebElement btnLoginVk;
 
-    @FindBy(className = "login_facebook")
+    @FindBy(id = "front9")
     WebElement btnLoginFb;
 
-    @FindBy(xpath = ".//*[@id='frontend']/div[1]/header/div[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[2]/button")
+    //email
+
+    @FindBy(id = "front13")
+    WebElement btnSignViaEmail;
+
+    //reg
+
+    @FindBy(id = "front12")
     WebElement btnRegistration;
 
     public SwitchFormMainPage(WebDriver driver) {

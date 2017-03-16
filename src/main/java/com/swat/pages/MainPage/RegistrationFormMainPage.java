@@ -15,31 +15,40 @@ public class RegistrationFormMainPage extends BasePage {
 
     //Credentials
 
-    @FindBy (name = "first_name")
+    @FindBy (id = "front14")
     WebElement fieldFirstName;
 
-    @FindBy (name = "last_name")
+    @FindBy (id = "front15")
     WebElement fieldLastName;
 
-    @FindBy (name = "email")
+    @FindBy (id = "front16")
     WebElement fieldEmail;
 
-    @FindBy (name = "password")
+    @FindBy (id = "front17")
     WebElement fieldPassword;
 
-    @FindBy (name = "phone")
+    @FindBy (id = "front18")
     WebElement fieldPhone;
 
     //Birthday
 
-    @FindBy (xpath =  ".//*[@id='birth_day']/div[1]/div/a/span")
+    @FindBy (id = "front19_chosen")
     WebElement dropdownDayOfBirth;
 
-    @FindBy (xpath = ".//*[@id='birth_day']/div[2]/div/a/span")
+    @FindBy (id = "front20_chosen")
     WebElement dropdownMonthOfBirth;
 
-    @FindBy (xpath = ".//*[@id='birth_day']/div[3]/div/a/span")
+    @FindBy (id = "front22_chosen")
     WebElement dropdownYearOfBirth;
+
+    @FindBy(xpath = ".//*[@id='front20_chosen']/div/div/input")
+    WebElement textFieldMonthOfBirth;
+
+    @FindBy(xpath = ".//*[@id='front22_chosen']/div/div/input")
+    WebElement textFieldYearOfBirth;
+
+    @FindBy(xpath = ".//*[@id='front19_chosen']/div/div/input")
+    WebElement textFieldDayOfBirth;
 
     //Sex
 
@@ -51,7 +60,7 @@ public class RegistrationFormMainPage extends BasePage {
 
     //Confirmation
 
-    @FindBy (xpath = ".//*[@id='frontend']/div[1]/header/div[1]/div[1]/div[3]/div[1]/div[2]/form/button")
+    @FindBy (id = "front23")
     WebElement buttonConfirmRegistration;
 
     public RegistrationFormMainPage(WebDriver driver) {
@@ -68,6 +77,22 @@ public class RegistrationFormMainPage extends BasePage {
         getForm().set(fieldEmail, user.getEmail());
         Thread.sleep(1000);
         getForm().set(fieldPassword, user.getPassword());
+        Thread.sleep(1000);
+        getForm().set(fieldPhone, user.getTelephoneNumber());
+        Thread.sleep(1000);
+
+        if (user.getSex().equals("female")) checkBoxFemaleSex.click();
+
+        dropdownDayOfBirth.click();
+        getForm().set(textFieldDayOfBirth, user.getDayOfBirth());
+        Thread.sleep(1000);
+
+        dropdownMonthOfBirth.click();
+        getForm().set(textFieldMonthOfBirth, user.getMonthOfBirth());
+        Thread.sleep(1000);
+
+        dropdownYearOfBirth.click();
+        getForm().set(textFieldYearOfBirth, user.getYearOfBirth());
         Thread.sleep(1000);
 
         getForm().submit();
