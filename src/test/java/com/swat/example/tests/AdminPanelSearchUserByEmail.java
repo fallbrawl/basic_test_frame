@@ -1,14 +1,7 @@
 package com.swat.example.tests;
 
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
-import static org.testng.AssertJUnit.assertTrue;
-
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.swat.BasePage;
 import com.swat.data.UserData;
 import com.swat.pages.AdminMainPage;
@@ -19,14 +12,16 @@ import com.swat.pages.AdminMainPage;
 
 public class AdminPanelSearchUserByEmail extends BaseTestCase {
 
+    final static String emailSearch = "test1@test1.test1";
     private UserData email = new UserData("test1@test1.test1");
+    
     @Test
-    public void adminPanelSearchUserByEmail(){
+    public void adminPanelSearchUserByEmail() throws InterruptedException {
     	AdminMainPage adminMainPage = BasePage.create(getDriver(),AdminMainPage.class);
         adminMainPage.open();
         adminMainPage.searchAs(email); 
-//		assertTrue(adminMainPage.isUserFound().contains("test1@test1.test1"));
-		adminMainPage.isUserFound();		
+
+        Assert.assertEquals(emailSearch, adminMainPage.isUserFound(), "Email " + emailSearch + " succesfully found!");		
     }	
 	
 }
