@@ -3,8 +3,6 @@ package com.swat.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.swat.BasePage;
 import com.swat.data.UserData;
@@ -30,7 +28,7 @@ public class AdminMainPage extends BasePage {
 //	@FindBy(xpath = "/html/body/div[2]/div[3]/div/div/div/div[2]/div[4]/table/tbody/tr/td[9]/div/div[2]/div/div/div[3]/button[2]")
 	@FindBy(xpath = "//table/tbody/tr/td[9]/div/div[2]/div/div/div[3]/button[2]")
 	private WebElement confirmButton;	
-	
+
 //	@FindBy(xpath = "/html/body/div[2]/div[3]/div/div/div/div[2]/div[4]/table/tbody/tr/td")
 	@FindBy(xpath = "//table/tbody/tr/td")	
 	private WebElement dataNotFound;	
@@ -41,7 +39,6 @@ public class AdminMainPage extends BasePage {
 	}
 
 	public /*Boolean*/ String isLoggedIn() {
-//		return linkSignOut.isDisplayed();	
 		return userNameSurname.getText();		
 	}
 	public AdminMainPage loginAs(UserData admin) {
@@ -50,34 +47,35 @@ public class AdminMainPage extends BasePage {
 	}	
 
 	//Set email in searchInput
-	public AdminMainPage searchAs(UserData email) {
+	public AdminMainPage searchAs(UserData email) throws InterruptedException  {
 		getForm().set(searchInput, email.getEmail());
+        Thread.sleep(500);
 		return BasePage.create(driver, AdminMainPage.class);
 	}	
     //Check the user is found
-	public Boolean isUserFound() {
+/*	public Boolean isUserFound() {
 		return (new WebDriverWait(driver, 20)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
                 return emailUserFound.getText().contains("test1@test1.test1");
             }
         });	
-	}
+	}*/
+    public String isUserFound() {
+        return emailUserFound.getText();
+    }	
 	
 	//Delete user
-	public AdminMainPage delete() {
+	public AdminMainPage delete() throws InterruptedException {
 		deleteButton.click();
 		confirmButton.click();
+        Thread.sleep(500);		
 		return BasePage.create(driver, AdminMainPage.class);
 	}	
-    //Check the user is NOT found (is deleted)
-	public Boolean isDeletedUserFound() {
-		return (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
-            public Boolean apply(WebDriver d) {
-                return dataNotFound.getText().contains("Данные не найдены.");
-            }
-        });	
-	}	
-	
+
+	//Check the user is NOT found (is deleted)
+    public String isDeletedUserFound() {
+        return dataNotFound.getText();
+    }	
 	
 	
 }
