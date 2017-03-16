@@ -15,14 +15,16 @@ import org.testng.annotations.Test;
 
 public class AdminPanelAuthorizeTest extends BaseTestCase {
 
+    final static String userNameSurname = "Name Surname";	
     private UserData admin = new UserData("environmentfortesting@gmail.com", "111111");
+    
     @Test
     public void adminPanelAuthorizeTest(){
     	BackendLoginPage backendLoginPage = BasePage.create(getDriver(),BackendLoginPage.class);
         backendLoginPage.open();
         
 		AdminMainPage adminMainPage = backendLoginPage.loginAs(admin);
-		assertTrue(adminMainPage.isLoggedIn().contains("Name Surname"));
+		assertTrue(adminMainPage.isLoggedIn().contains(userNameSurname));
            
     }
 
