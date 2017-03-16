@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 public class UserRegistrationTest extends BaseTestCase {
 
     final static String userName = "First";
-    private UserData user = new UserData("First", "Last", "test1124@test1.test1", "111111", "+380501234567", "21", "май", "1950", "female");
+    private UserData user = new UserData("First", "Last", "test1@test1.test1", "111111", "+380501234567", "21", "май", "1950", "female");
 
     @Test
 
@@ -32,6 +32,7 @@ public class UserRegistrationTest extends BaseTestCase {
         Assert.assertEquals(userName, mainPage.getUserName(), "User " + userName + " succesfully registered!");
 
         mainPage.logout();
-
+        Thread.sleep(500);
+        
     }
 }
