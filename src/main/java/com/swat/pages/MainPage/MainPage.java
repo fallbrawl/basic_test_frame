@@ -20,6 +20,9 @@ public class MainPage extends BasePage {
 
     @FindBy(id = "front37")
     WebElement btnUserMenuLogout;
+    
+    @FindBy(id = "front30")
+    WebElement btnUserMenuProfile;    
 
     public MainPage(WebDriver driver) {
         super(driver, PageTitle.MAIN_PAGE_RU, PageUrl.MAIN_PAGE);
@@ -40,4 +43,13 @@ public class MainPage extends BasePage {
         btnSignIn.click();
         return BasePage.create(driver, SwitchFormMainPage.class);
     }
+    
+    public void menuDropDown() {
+        btnUserMenuDropdown.click();
+    }    
+
+    public String getItemProfile() {
+        return btnUserMenuProfile.getText();
+    }    
+    
 }
