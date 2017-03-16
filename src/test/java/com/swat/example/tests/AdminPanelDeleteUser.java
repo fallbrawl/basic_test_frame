@@ -1,9 +1,8 @@
 package com.swat.example.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.swat.BasePage;
-import com.swat.data.UserData;
 import com.swat.pages.AdminMainPage;
 
 /**
@@ -12,16 +11,14 @@ import com.swat.pages.AdminMainPage;
 
 public class AdminPanelDeleteUser extends BaseTestCase {
 
-//  private UserData email = new UserData("test1@test1.test1");
+    final static String message = "Данные не найдены.";	
+    
     @Test
-    public void adminPanelDeleteUser(){
+    public void adminPanelDeleteUser() throws InterruptedException {
     	AdminMainPage adminMainPage = BasePage.create(getDriver(),AdminMainPage.class);
-//      adminMainPage.open();       
-
-    	adminMainPage.isUserFound();
         adminMainPage.delete();       
-        
-		adminMainPage.isDeletedUserFound();		
+     
+        Assert.assertEquals(message, adminMainPage.isDeletedUserFound(), "User was deleted!");	        
     }	
 	
 }
