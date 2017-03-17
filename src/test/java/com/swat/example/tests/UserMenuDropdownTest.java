@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.swat.BasePage;
-import com.swat.pages.MainPage.MainPage;
+import com.swat.pages.UserPages.MainPage;
 
 /**
  * Created by Alex on 16.03.17.
@@ -20,7 +20,7 @@ public class UserMenuDropdownTest extends BaseTestCase {
         MainPage mainPage = BasePage.create(getDriver(),MainPage.class);
         mainPage.menuDropDown();
 
-        Assert.assertEquals(ItemProfile, mainPage.getItemProfile(), "Item" + ItemProfile + "is presented int the dropdown menu");
+        Assert.assertEquals(ItemProfile, mainPage.getItemProfileText(), "Item " + ItemProfile + " is present in the dropdown menu");
 
     }	
 	

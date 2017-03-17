@@ -24,6 +24,7 @@ public class BackendLoginPage extends BasePage {
    	}
 	
 	//Set email and password in textbox and click on button
+
 	public AdminMainPage loginAs(UserData admin) {
 		getForm().set(email, admin.getEmail()).set(password, admin.getPassword()).submit();
 		return BasePage.create(driver, AdminMainPage.class);

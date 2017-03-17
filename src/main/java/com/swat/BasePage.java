@@ -86,6 +86,9 @@ public abstract class BasePage extends AbstractContainer {
 	}
 
 	public String getPageFullUrl() {
+		if (pageUrl.getUrl().equals("")) {
+			return driver.getCurrentUrl();
+		}
 		return pageUrl.getUrl();
 	}
 
