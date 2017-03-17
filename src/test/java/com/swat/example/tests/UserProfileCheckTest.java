@@ -22,8 +22,11 @@ public class UserProfileCheckTest extends BaseTestCase {
         Assert.assertEquals(userProfilePage.getFieldLastNameProfile(), UserStorage.userForRegistration.getLastName());
         Assert.assertEquals(userProfilePage.getFieldEmailProfile(), UserStorage.userForRegistration.getEmail());
         Assert.assertEquals(userProfilePage.getFieldPhoneProfile(), UserStorage.userForRegistration.getTelephoneNumber());
+        Assert.assertEquals(userProfilePage.getSex(),UserStorage.userForRegistration.getSex());
 
         //TODO: после фикса добавить дату рождения
+
+        userProfilePage.logout();
 
     }
 }

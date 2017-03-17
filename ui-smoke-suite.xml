@@ -1,15 +1,15 @@
 <suite name="suite1">
     <test name="suite1">
         <classes>
-            <!--<class name="com.swat.example.tests.UserRegistrationTest"/>-->
+            <class name="com.swat.example.tests.UserRegistrationTest"/>
 
             <class name="com.swat.example.tests.UserAuthorizeTest" />
             <class name="com.swat.example.tests.UserMenuDropdownTest" />
             <class name="com.swat.example.tests.UserProfileCheckTest" />
 
-            <!--<class name="com.swat.example.tests.AdminPanelAuthorizeTest"/>-->
-            <!--<class name="com.swat.example.tests.AdminPanelSearchUserByEmail"/>-->
-            <!--<class name="com.swat.example.tests.AdminPanelDeleteUser"/>-->
+            <class name="com.swat.example.tests.AdminPanelAuthorizeTest"/>
+            <class name="com.swat.example.tests.AdminPanelSearchUserByEmail"/>
+            <class name="com.swat.example.tests.AdminPanelDeleteUser"/>
         </classes>
     </test>
 </suite>

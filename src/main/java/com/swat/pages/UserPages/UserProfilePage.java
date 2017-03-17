@@ -39,8 +39,18 @@ public class UserProfilePage extends BasePage {
     @FindBy (id = "front56")
     WebElement fieldMonthProfile;
 
+    @FindBy (id = "check1")
+    WebElement btnSexMale;
+
+    @FindBy (id = "check2")
+    WebElement btnSexFemale;
+
     @FindBy (id = "front57")
     WebElement btnDoneProfile;
+
+    @FindBy (id ="front47")
+    WebElement btnLogout;
+
 
     public UserProfilePage(WebDriver driver) {
         super(driver, PageTitle.MAIN_PAGE_RU, PageUrl.DYNAMIC_PAGE);
@@ -56,8 +66,6 @@ public class UserProfilePage extends BasePage {
     }
 
     public String getFieldFirstNameProfile() throws InterruptedException {
-        Thread.sleep(2000);
-        System.out.print(fieldFirstNameProfile.getText());
         return fieldFirstNameProfile.getAttribute("value");
     }
 
@@ -65,4 +73,14 @@ public class UserProfilePage extends BasePage {
         return fieldPhoneProfile.getAttribute("value");
     }
 
+    public String getSex(){
+        if (btnSexFemale.isSelected()){
+            return "female";
+        }
+        return "male";
+    }
+
+    public void logout() {
+        btnLogout.click();
+    }
 }
