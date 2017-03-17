@@ -2,6 +2,7 @@ package com.swat.pages.UserPages;
 
 import com.swat.BasePage;
 import com.swat.pages.UserPages.MainPageForms.SwitchFormMainPage;
+import com.swat.pages.UserPages.UserCabinetPages.UserProfilePage;
 import com.swat.staticdata.PageTitle;
 import com.swat.staticdata.PageUrl;
 import org.openqa.selenium.WebDriver;

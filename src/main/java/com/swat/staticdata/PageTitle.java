@@ -10,7 +10,8 @@ public enum PageTitle {
 	ADMIN_VIEW_MEMBER_PAGE("Membership Management"), //
 	MAIN_PAGE_RU("Tomato"), //
 	BACKEND_LOGIN_PAGE("Tomato Backend Login"), //
-	ADMIN_MAIN_PAGE("Tomato Backend");
+	ADMIN_MAIN_PAGE("Tomato Backend"),//
+	DYNAMIC_PAGE("");
 
 	private String titleValue;
 

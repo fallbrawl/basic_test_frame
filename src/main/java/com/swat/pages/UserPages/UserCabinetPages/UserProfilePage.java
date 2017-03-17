@@ -1,8 +1,5 @@
-package com.swat.pages.UserPages;
+package com.swat.pages.UserPages.UserCabinetPages;
 
-import com.swat.BasePage;
-import com.swat.staticdata.PageTitle;
-import com.swat.staticdata.PageUrl;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 /**
  * Created by paul on 16.03.17.
  */
-public class UserProfilePage extends BasePage {
+public class UserProfilePage extends UserMenuFrame {
 
     @FindBy (id = "front48")
     WebElement fieldFirstNameProfile;
@@ -48,12 +45,9 @@ public class UserProfilePage extends BasePage {
     @FindBy (id = "front57")
     WebElement btnDoneProfile;
 
-    @FindBy (id ="front47")
-    WebElement btnLogout;
-
 
     public UserProfilePage(WebDriver driver) {
-        super(driver, PageTitle.MAIN_PAGE_RU, PageUrl.DYNAMIC_PAGE);
+        super(driver);
         //Dynamic page содержит пустую строку. Добавил в метод getPageFullUrl() проверку на пустую строку для подсасывания урла из текущего драйвера
     }
 

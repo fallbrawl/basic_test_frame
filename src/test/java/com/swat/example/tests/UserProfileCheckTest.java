@@ -2,7 +2,7 @@ package com.swat.example.tests;
 
 import com.swat.BasePage;
 import com.swat.pages.UserPages.MainPage;
-import com.swat.pages.UserPages.UserProfilePage;
+import com.swat.pages.UserPages.UserCabinetPages.UserProfilePage;
 import com.swat.staticdata.UserStorage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -27,6 +27,6 @@ public class UserProfileCheckTest extends BaseTestCase {
         //TODO: After fix bug add the date of birth
 
         userProfilePage.logout();
-
+        Thread.sleep(500);
     }
 }
