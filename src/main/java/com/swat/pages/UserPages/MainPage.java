@@ -34,7 +34,7 @@ public class MainPage extends BasePage {
     }
 
     public void logout() throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(500);
         btnUserMenuDropdown.click();
         btnUserMenuLogout.click();
 
