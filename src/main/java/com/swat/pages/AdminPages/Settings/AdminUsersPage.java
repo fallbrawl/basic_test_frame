@@ -1,4 +1,4 @@
-package com.swat.pages;
+package com.swat.pages.AdminPages.Settings;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,19 +6,17 @@ import org.openqa.selenium.support.FindBy;
 
 import com.swat.BasePage;
 import com.swat.data.UserData;
+import com.swat.pages.AdminPages.AdminFrame;
 import com.swat.staticdata.PageTitle;
 import com.swat.staticdata.PageUrl;
 
-public class AdminMainPage extends BasePage {
+public class AdminUsersPage extends AdminFrame {
 
 	@FindBy(id = "admin5")
 	private WebElement userNameSurname;
 
 	@FindBy(id = "admin6")
 	private WebElement searchInput;
-	
-	@FindBy(id = "admin13")
-	private WebElement btnAdminMenuLogout;	
 	
 //	@FindBy(xpath = "/html/body/div[2]/div[3]/div/div/div/div[2]/div[4]/table/tbody/tr/td[3]")
 	@FindBy(xpath = "//table/tbody/tr/td[3]")	
@@ -37,28 +35,24 @@ public class AdminMainPage extends BasePage {
 	private WebElement dataNotFound;	
 	
 	
-	public AdminMainPage(WebDriver driver) {
+	public AdminUsersPage(WebDriver driver) {
 		super(driver, PageTitle.ADMIN_MAIN_PAGE, PageUrl.ADMIN_MAIN_PAGE);
 	}
 
 	public /*Boolean*/ String isLoggedIn() {
 		return userNameSurname.getText();		
 	}
-	public AdminMainPage loginAs(UserData admin) {
+	public AdminUsersPage loginAs(UserData admin) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 	
-    public void adminMenuLogout() throws InterruptedException {
-        btnAdminMenuLogout.click();
-
-    }	
 
 	//Set email in searchInput
-	public AdminMainPage searchAs(UserData email) throws InterruptedException  {
+	public AdminUsersPage searchAs(UserData email) throws InterruptedException  {
 		getForm().set(searchInput, email.getEmail());
         Thread.sleep(500);
-		return BasePage.create(driver, AdminMainPage.class);
+		return BasePage.create(driver, AdminUsersPage.class);
 	}	
     //Check the user is found
 /*	public Boolean isUserFound() {
@@ -73,11 +67,11 @@ public class AdminMainPage extends BasePage {
     }	
 	
 	//Delete user
-	public AdminMainPage delete() throws InterruptedException {
+	public AdminUsersPage delete() throws InterruptedException {
 		deleteButton.click();
 		confirmButton.click();
         Thread.sleep(500);		
-		return BasePage.create(driver, AdminMainPage.class);
+		return BasePage.create(driver, AdminUsersPage.class);
 	}	
 
 	//Check the user is NOT found (is deleted)
