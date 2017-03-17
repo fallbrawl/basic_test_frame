@@ -1,6 +1,7 @@
-package com.swat.pages.MainPage;
+package com.swat.pages.UserPages;
 
 import com.swat.BasePage;
+import com.swat.pages.UserPages.MainPageForms.SwitchFormMainPage;
 import com.swat.staticdata.PageTitle;
 import com.swat.staticdata.PageUrl;
 import org.openqa.selenium.WebDriver;
@@ -48,8 +49,13 @@ public class MainPage extends BasePage {
         btnUserMenuDropdown.click();
     }    
 
-    public String getItemProfile() {
+    public String getItemProfileText() {
         return btnUserMenuProfile.getText();
-    }    
+    }
+
+    public UserProfilePage getProfilePage(){
+        btnUserMenuProfile.click();
+        return BasePage.create(driver, UserProfilePage.class);
+    }
     
 }

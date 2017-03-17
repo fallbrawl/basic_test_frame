@@ -1,4 +1,4 @@
-package com.swat.pages.MainPage;
+package com.swat.pages.UserPages.MainPageForms;
 
 import com.swat.BasePage;
 import com.swat.data.UserData;

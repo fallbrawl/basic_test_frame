@@ -1,10 +1,10 @@
 package com.swat.example.tests;
 
 import com.swat.BasePage;
-import com.swat.data.UserData;
-import com.swat.pages.MainPage.MainPage;
-import com.swat.pages.MainPage.RegistrationFormMainPage;
-import com.swat.pages.MainPage.SwitchFormMainPage;
+import com.swat.pages.UserPages.MainPage;
+import com.swat.pages.UserPages.MainPageForms.RegistrationFormMainPage;
+import com.swat.pages.UserPages.MainPageForms.SwitchFormMainPage;
+import com.swat.staticdata.UserStorage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,7 +14,6 @@ import org.testng.annotations.Test;
 public class UserRegistrationTest extends BaseTestCase {
 
     final static String userName = "First";
-    private UserData user = new UserData("First", "Last", "test1@test1.test1", "111111", "+380501234567", "21", "май", "1950", "female");
 
     @Test
 
@@ -27,7 +26,7 @@ public class UserRegistrationTest extends BaseTestCase {
 
         RegistrationFormMainPage registrationFormMainPage = (RegistrationFormMainPage) switchFormMainPage.chooseLoginOrRegistrationVariant("registration");
 
-        registrationFormMainPage.registerAs(user);
+        registrationFormMainPage.registerAs(UserStorage.userForRegistration);
 
         Assert.assertEquals(userName, mainPage.getUserName(), "User " + userName + " succesfully registered!");
 

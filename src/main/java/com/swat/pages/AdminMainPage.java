@@ -15,7 +15,10 @@ public class AdminMainPage extends BasePage {
 	private WebElement userNameSurname;
 
 	@FindBy(id = "admin6")
-	private WebElement searchInput;	
+	private WebElement searchInput;
+	
+	@FindBy(id = "admin13")
+	private WebElement btnAdminMenuLogout;	
 	
 //	@FindBy(xpath = "/html/body/div[2]/div[3]/div/div/div/div[2]/div[4]/table/tbody/tr/td[3]")
 	@FindBy(xpath = "//table/tbody/tr/td[3]")	
@@ -44,7 +47,12 @@ public class AdminMainPage extends BasePage {
 	public AdminMainPage loginAs(UserData admin) {
 		// TODO Auto-generated method stub
 		return null;
-	}	
+	}
+	
+    public void adminMenuLogout() throws InterruptedException {
+        btnAdminMenuLogout.click();
+
+    }	
 
 	//Set email in searchInput
 	public AdminMainPage searchAs(UserData email) throws InterruptedException  {
