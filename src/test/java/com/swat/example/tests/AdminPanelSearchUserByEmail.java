@@ -1,7 +1,7 @@
 package com.swat.example.tests;
 
 import com.swat.BasePage;
-import com.swat.pages.AdminMainPage;
+import com.swat.pages.AdminPages.Settings.AdminUsersPage;
 import com.swat.staticdata.UserStorage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -16,11 +16,11 @@ public class AdminPanelSearchUserByEmail extends BaseTestCase {
 
     @Test
     public void adminPanelSearchUserByEmail() throws InterruptedException {
-    	AdminMainPage adminMainPage = BasePage.create(getDriver(),AdminMainPage.class);
-        adminMainPage.open();
-        adminMainPage.searchAs(UserStorage.email);
+    	AdminUsersPage adminUsersPage = BasePage.create(getDriver(),AdminUsersPage.class);
+        adminUsersPage.open();
+        adminUsersPage.searchAs(UserStorage.email);
 
-        Assert.assertEquals(emailSearch, adminMainPage.isUserFound(), "Email " + emailSearch + " succesfully found!");		
+        Assert.assertEquals(emailSearch, adminUsersPage.isUserFound(), "Email " + emailSearch + " succesfully found!");		
     }	
 	
 }
