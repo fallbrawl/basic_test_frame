@@ -18,7 +18,10 @@ public class AdminPanelDeleteUser extends BaseTestCase {
     	AdminMainPage adminMainPage = BasePage.create(getDriver(),AdminMainPage.class);
         adminMainPage.delete();       
      
-        Assert.assertEquals(message, adminMainPage.isDeletedUserFound(), "User was deleted!");	        
+        Assert.assertEquals(message, adminMainPage.isDeletedUserFound(), "User was deleted!");	
+        
+        adminMainPage.adminMenuLogout();
+
     }	
 	
 }
