@@ -1,6 +1,7 @@
-package com.swat.example.tests;
+package com.swat.example.tests.Examples;
 
 import com.swat.BasePage;
+import com.swat.example.tests.BaseTestCase;
 import com.swat.pages.UserPages.MainPage;
 import org.testng.annotations.Test;
 

@@ -5,9 +5,12 @@ import com.swat.pages.UserPages.MainPageForms.SwitchFormMainPage;
 import com.swat.pages.UserPages.UserCabinetPages.UserProfilePage;
 import com.swat.staticdata.PageTitle;
 import com.swat.staticdata.PageUrl;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.ArrayList;
 
 /**
  * Created by paul on 30.01.17
@@ -24,7 +27,16 @@ public class MainPage extends BasePage {
     WebElement btnUserMenuLogout;
     
     @FindBy(id = "front30")
-    WebElement btnUserMenuProfile;    
+    WebElement btnUserMenuProfile;
+
+    @FindBy(id = "city_select_chosen")
+    WebElement dropdownCitySelect;
+
+    @FindBy(className = "chosen-single")
+    WebElement fieldCity;
+
+    @FindBy(name = "query")
+    WebElement textfieldSearch;
 
     public MainPage(WebDriver driver) {
         super(driver, PageTitle.MAIN_PAGE_RU, PageUrl.MAIN_PAGE);
@@ -39,6 +51,22 @@ public class MainPage extends BasePage {
         btnUserMenuDropdown.click();
         btnUserMenuLogout.click();
 
+    }
+
+    public void selectCity(String cityName){
+        if (!fieldCity.getText().equals(cityName)) {
+
+            dropdownCitySelect.click();
+            ArrayList<WebElement> cities = new ArrayList<>(driver.findElements(By.className("active-result")));
+
+            for (WebElement a : cities) {
+
+                if (a.getText().equals(cityName)) {
+                    a.click();
+                    return;
+                }
+            }
+        }
     }
 
     public SwitchFormMainPage openLoginPane() {
@@ -58,5 +86,10 @@ public class MainPage extends BasePage {
         btnUserMenuProfile.click();
         return BasePage.create(driver, UserProfilePage.class);
     }
-    
+
+    public SearchResultsPage searchFor(String restaurantName) {
+        textfieldSearch.sendKeys(restaurantName);
+        textfieldSearch.submit();
+        return BasePage.create(driver, SearchResultsPage.class);
+    }
 }

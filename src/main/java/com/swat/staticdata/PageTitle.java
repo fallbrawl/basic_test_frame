@@ -1,8 +1,7 @@
 package com.swat.staticdata;
 
 public enum PageTitle {
-	
-	EMPTY(""),//
+
 	ADMIN_LOGIN("Sign In First!"), //
 	ADMIN_HOME("Membership Management"), //
 	ADMIN_ADD_MEMBER("Membership Management"), //
@@ -22,5 +21,4 @@ public enum PageTitle {
 	public String getTitleValue() {
 		return titleValue;
 	}
-
 }
