@@ -20,7 +20,7 @@ public class RestaurantOverviewPage extends RestaurantSwitchPane {
     @FindBy(className = "list_check")
     WebElement textTrait;
 
-    @FindBy(css = "span[itemprop='servesCuisine']")
+    @FindBy(xpath = "//*[@id=\"frontend\"]/div[1]/div[2]/div/div[1]/div[3]/div/div/div[1]/p[2]/a")
     WebElement textCuisine;
 
     @FindBy(css = "p[itemprop='description']")

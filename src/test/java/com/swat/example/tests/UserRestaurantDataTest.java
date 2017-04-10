@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
  */
 public class UserRestaurantDataTest extends BaseTestCase {
 
-    RestaurantData restaurant = new RestaurantData("Вай-фай", "restaurant1@restaurant1.restaurant1", "Текст описания ресторана", "Кухня", "+380501234567", "Одесса, Конная, 1", "restaurant1.od.ua");
+    RestaurantData restaurant = new RestaurantData("Вай-фай", "+380501234567", "Армянская", "Текстовое описание о ресторане.", "restaurant1.od.ua", "restaurant1@restaurant1.restaurant1");
 
     @Test
     public void restaurantDataTest() throws InterruptedException {
@@ -21,11 +21,11 @@ public class UserRestaurantDataTest extends BaseTestCase {
         restaurantOverviewPage.getTrait();
 
         Assert.assertEquals(restaurantOverviewPage.getTrait(), restaurant.getTraits());
-        Assert.assertEquals(restaurantOverviewPage.getPhone(), restaurant.getTelephoneNumber());
+        Assert.assertEquals(restaurantOverviewPage.getPhone(), restaurant.getRestaurantPhone());
         Assert.assertEquals(restaurantOverviewPage.getCuisine(), restaurant.getCuisine());
-        Assert.assertEquals(restaurantOverviewPage.getDescription(), restaurant.getDescription());
-        Assert.assertEquals(restaurantOverviewPage.getWebsite(), restaurant.getWebsite());
-        Assert.assertEquals(restaurantOverviewPage.getEmail(), restaurant.getEmail());
+        Assert.assertEquals(restaurantOverviewPage.getDescription(), restaurant.getTextDescriptionRu());
+        Assert.assertEquals(restaurantOverviewPage.getWebsite(), restaurant.getRestaurantSite());
+        Assert.assertEquals(restaurantOverviewPage.getEmail(), restaurant.getRestaurantEmail());
 
 
 

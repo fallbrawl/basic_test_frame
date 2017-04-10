@@ -1,84 +1,210 @@
 package com.swat.data;
 
-/**
- * Created by paul on 24.03.17.
- */
 public class RestaurantData {
 
-    public RestaurantData(String traits, String email, String description, String kitchen, String telephoneNumber, String address, String website){
-        this.description = description;
-        this.kitchen = kitchen;
+    public RestaurantData(String uri, String nameRu, String nameEn, String nameUa, String city,
+                          String addressRu, String addressEn, String addressUa, String fridayOpen, String fridayClose,
+                          String textDescriptionRu, String textDescriptionEn, String textDescriptionUa,
+                          String restaurantPhone, String restaurantEmail, String restaurantSite){
+        this.uri = uri;
+        this.nameRu = nameRu;
+        this.nameEn = nameEn;
+        this.nameUa = nameUa;
+        this.city = city;
+        this.addressRu = addressRu;
+        this.addressEn = addressEn;
+        this.addressUa = addressUa;
+        this.fridayOpen = fridayOpen;
+        this.fridayClose = fridayClose;
+        this.textDescriptionRu = textDescriptionRu;
+        this.textDescriptionEn = textDescriptionEn;
+        this.textDescriptionUa = textDescriptionUa;
+        this.restaurantPhone = restaurantPhone;
+        this.restaurantEmail = restaurantEmail;
+        this.restaurantSite = restaurantSite;
+    }
+
+    /*Added for UserRestaurantDataTest*/
+    public RestaurantData(String traits, String restaurantPhone, String cuisine, String textDescriptionRu, String restaurantSite, String restaurantEmail){
         this.traits = traits;
-        this.email = email;
-        this.address = address;
-        this.website = website;
-        this.telephoneNumber = telephoneNumber;
+        this.cuisine = cuisine;
+        this.textDescriptionRu = textDescriptionRu;
+        this.restaurantPhone = restaurantPhone;
+        this.restaurantEmail = restaurantEmail;
+        this.restaurantSite = restaurantSite;
     }
 
 
-    public String getCuisine() {
-        return kitchen;
-    }
 
-    public void setKitchen(String kitchen) {
-        this.kitchen = kitchen;
-    }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    public RestaurantData(String nameRu){
+        this.nameRu = nameRu;;
     }
 
     public String getTraits() {
         return traits;
     }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getTelephoneNumber() {
-        return telephoneNumber;
-    }
-
-    public void setTelephoneNumber(String telephoneNumber) {
-        this.telephoneNumber = telephoneNumber;
-    }
-
-    public void setTraits(String traits) {
-        this.traits = traits;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public void setWebsite(String website) {
-        this.website = website;
-    }
-
-    public String getWebsite() {
-        return website;
-    }
-
-    public String getAddress() {
-        return address;
+    public String getCuisine() {
+        return cuisine;
     }
 
 
-    private String description;
-    private String kitchen;
+    public String getUri() {
+        return uri;
+    }
+
+    public String getNameRu() {
+        return nameRu;
+    }
+
+    public String getNameEn() {
+        return nameEn;
+    }
+
+    public String getNameUa() {
+        return nameUa;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getAddressRu() {
+        return addressRu;
+    }
+
+    public String getAddressEn() {
+        return addressEn;
+    }
+
+    public String getAddressUa() {
+        return addressUa;
+    }
+
+    public String getFridayOpen() {
+        return fridayOpen;
+    }
+
+    public String getFridayClose() {
+        return fridayClose;
+    }
+
+    public String getTextDescriptionRu(){
+        return textDescriptionRu;
+    }
+
+    public String getTextDescriptionEn(){
+        return textDescriptionEn;
+    }
+
+    public String getTextDescriptionUa(){
+        return textDescriptionUa;
+    }
+
+    public String getRestaurantPhone(){
+        return restaurantPhone;
+    }
+
+    public String getRestaurantEmail(){
+        return restaurantEmail;
+    }
+
+    public String getRestaurantSite(){
+        return restaurantSite;
+    }
+
+
+    public String setTraits() {
+        return traits;
+    }
+    public String setCuisine() {
+        return cuisine;
+    }
+
+
+    public void setUri(String uri) {
+        this.uri = uri;
+    }
+
+    public void setNameRu(String nameRu) {
+        this.nameRu = nameRu;
+    }
+
+    public void setNameEn(String nameEn) {
+        this.nameEn = nameEn;
+    }
+
+    public void setNameUa(String nameUa) {
+        this.nameUa = nameUa;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setAddressRu(String addressRu) {
+        this.addressRu = addressRu;
+    }
+
+    public void setAddressEn(String addressEn) {
+        this.addressEn = addressEn;
+    }
+
+    public void setAddressUa(String addressUa) {
+        this.addressUa = addressUa;
+    }
+
+    public void setFridayOpen(String fridayOpen) {
+        this.fridayOpen = fridayOpen;
+    }
+
+    public void setFridayClose(String fridayClose) {
+        this.fridayClose = fridayClose;
+    }
+
+    public void setTextDescriptionRu (String textDescriptionRu) {
+        this.textDescriptionRu = textDescriptionRu;
+    }
+
+    public void setTextDescriptionEn (String textDescriptionEn) {
+        this.textDescriptionEn = textDescriptionEn;
+    }
+
+    public void setTextDescriptionUa (String textDescriptionUa) {
+        this.textDescriptionUa = textDescriptionUa;
+    }
+
+    public void setRestaurantPhone (String restaurantPhone) {
+        this.restaurantPhone = restaurantPhone;
+    }
+
+    public void setRestaurantEmail (String restaurantEmail) {
+        this.restaurantEmail = restaurantEmail;
+    }
+
+    public void setRestaurantSite (String restaurantSite) {
+        this.restaurantSite = restaurantSite;
+    }
+
     private String traits;
-    private String email;
-    private String telephoneNumber;
-    private String website;
-    private String address;
+    private String cuisine;
+
+
+    private String uri;
+    private String nameRu;
+    private String nameEn;
+    private String nameUa;
+    private String city;
+    private String addressRu;
+    private String addressEn;
+    private String addressUa;
+    private String fridayOpen;
+    private String fridayClose;
+    private String textDescriptionRu;
+    private String textDescriptionEn;
+    private String textDescriptionUa;
+    private String restaurantPhone;
+    private String restaurantEmail;
+    private String restaurantSite;
 
 }
