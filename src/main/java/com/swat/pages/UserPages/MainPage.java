@@ -88,7 +88,10 @@ public class MainPage extends BasePage {
     }
 
     public SearchResultsPage searchFor(String restaurantName) {
-        textfieldSearch.sendKeys(restaurantName);
+        if (restaurantName!=""){
+            textfieldSearch.sendKeys(restaurantName);
+        }
+
         textfieldSearch.submit();
         return BasePage.create(driver, SearchResultsPage.class);
     }

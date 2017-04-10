@@ -29,6 +29,9 @@ public class RegistrationFormMainPage extends BasePage {
     @FindBy (id = "front17")
     WebElement fieldPassword;
 
+    @FindBy (name = "password_confirmation")
+    WebElement fieldPasswordConfirmation;
+
     @FindBy (id = "front18")
     WebElement fieldPhone;
 
@@ -79,6 +82,8 @@ public class RegistrationFormMainPage extends BasePage {
         getForm().set(fieldEmail, user.getEmail());
         Thread.sleep(500);
         getForm().set(fieldPassword, user.getPassword());
+        Thread.sleep(500);
+        getForm().set(fieldPasswordConfirmation, user.getPassword());
         Thread.sleep(500);
         getForm().set(fieldPhone, user.getTelephoneNumber());
         Thread.sleep(500);

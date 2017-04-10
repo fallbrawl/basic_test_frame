@@ -1,9 +1,10 @@
 <suite name="UI-Regression-Suite">
   <test name="UI-Regression-Tests">
       <classes>
-        <class name="com.swat.example.tests.UserAuthorizeTest" />
-        <class name="com.swat.example.tests.UserMenuDropdownTest" />
-        <class name="com.swat.example.tests.UserProfileCheckTest" />
+          <class name="com.swat.example.tests.UserAuthorizeTest" />
+          <class name="com.swat.example.tests.UserRestaurantSearch" />
+          <class name="com.swat.example.tests.UserAddToBookmarksTest" />
+        />
       </classes>
  </test>
 </suite>
