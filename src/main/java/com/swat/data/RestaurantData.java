@@ -38,7 +38,7 @@ public class RestaurantData {
 
 
     public RestaurantData(String nameRu){
-        this.nameRu = nameRu;;
+        this.nameRu = nameRu;
     }
 
     public String getTraits() {
