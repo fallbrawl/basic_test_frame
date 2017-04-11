@@ -1,3 +1,4 @@
+<!--
 <suite name="suite1">
     <test name="suite1">
         <classes>
@@ -8,6 +9,22 @@
             <class name="com.swat.example.tests.AdminPanelAuthorizeTest"/>
             <class name="com.swat.example.tests.AdminPanelSearchUserByEmail"/>
             <class name="com.swat.example.tests.AdminPanelDeleteUser"/>
+        </classes>
+    </test>
+</suite>
+-->
+
+<suite name="suite2">
+    <test name="suite2">
+        <classes>
+            <class name="com.swat.example.tests.AdminPanelAuthorizeTest"/>
+            <class name="com.swat.example.tests.AdminCreateRestaurantGeneralTest"/>
+            <class name="com.swat.example.tests.AdminCreateRestaurantTypeTest"/>
+            <class name="com.swat.example.tests.AdminCreateRestaurantServicesTest"/>
+            <class name="com.swat.example.tests.AdminCreateRestaurantCuisineTest"/>
+            <class name="com.swat.example.tests.AdminCreateRestaurantSEOTest"/>
+            <class name="com.swat.example.tests.AdminCreateRestaurantSaveTest"/>
+            <class name="com.swat.example.tests.AdminPanelSearchRestaurantByName"/>
         </classes>
     </test>
 </suite>
