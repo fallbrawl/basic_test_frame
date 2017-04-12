@@ -16,11 +16,10 @@ public class AdminPanelSearchUserByEmail extends BaseTestCase {
 
     @Test
     public void adminPanelSearchUserByEmail() throws InterruptedException {
-    	AdminUsersPage adminUsersPage = BasePage.create(getDriver(),AdminUsersPage.class);
-        adminUsersPage.open();
+        AdminUsersPage adminUsersPage = BasePage.create(getDriver(),AdminUsersPage.class);
         adminUsersPage.searchAs(UserStorage.email);
 
-        Assert.assertEquals(emailSearch, adminUsersPage.isUserFound(), "Email " + emailSearch + " succesfully found!");		
-    }	
-	
+        Assert.assertEquals(emailSearch, adminUsersPage.isUserFound(), "Email " + emailSearch + " succesfully found!");
+    }
+
 }

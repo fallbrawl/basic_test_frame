@@ -31,7 +31,8 @@ public class RestaurantPhotoPage extends RestaurantSwitchPane {
             e.printStackTrace();
         }
         btnAddPhoto.click();
-        fileUploadPhoto.sendKeys("/home/paul/testin1/tomato-automation/src/main/resources/photo.jpg");
+//        fileUploadPhoto.sendKeys("/home/paul/testin1/tomato-automation/src/main/resources/photo.jpg");
+        fileUploadPhoto.sendKeys("/home/dev/idea-IC-171.3780.107/projects/git-tomato-automation/src/main/resources/photo2.jpg");
         btnConfirmUpload.click();
     }
 
