@@ -1,6 +1,6 @@
 <!--
 <suite name="suite1">
-    <test name="suite1">
+    <test name="1_2_3_4_5_6_7">
         <classes>
             <class name="com.swat.example.tests.UserRegistrationTest"/>
             <class name="com.swat.example.tests.UserAuthorizeTest" />
@@ -16,7 +16,7 @@
 
 <!--
 <suite name="suite2">
-    <test name="suite2">
+    <test name="1_2_3_4_5_6_7">
         <classes>
             <class name="com.swat.example.tests.AdminPanelAuthorizeTest"/>
             <class name="com.swat.example.tests.AdminCreateRestaurantGeneralTest"/>
@@ -31,9 +31,9 @@
 </suite>
 -->
 
-
-<suite name="suite3_1">
-    <test name="suite3_1">
+<!--
+<suite name="suite3">
+    <test name="1_2_3">
         <classes>
             <class name="com.swat.example.tests.UserRestaurantSearch"/>
             <class name="com.swat.example.tests.UserKitchenFilterTest"/>
@@ -41,10 +41,10 @@
         </classes>
     </test>
 </suite>
-
+-->
 <!--
-<suite name="suite3_2">
-    <test name="suite3_2">
+<suite name="suite3">
+    <test name="4">
      <classes>
             <class name="com.swat.example.tests.UserAuthorizeTest"/>
             <class name="com.swat.example.tests.UserRestaurantSearch"/>
@@ -54,8 +54,8 @@
 </suite>
 -->
 <!--
-<suite name="suite3_3">
-    <test name="suite3_3">
+<suite name="suite3">
+    <test name="UserAddPhotoTest(5)">
         <classes>
             <class name="com.swat.example.tests.UserAuthorizeTest"/>
             <class name="com.swat.example.tests.UserRestaurantSearch"/>
@@ -64,10 +64,9 @@
     </test>
 </suite>
 -->
-
 <!--
-<suite name="suite3_4">
-    <test name="suite3_4">
+<suite name="suite3">
+    <test name="UserAddToBookmarksTest(6)">
         <classes>
              <class name="com.swat.example.tests.UserAuthorizeTest"/>
              <class name="com.swat.example.tests.UserRestaurantSearch"/>
@@ -76,3 +75,13 @@
     </test>
 </suite>
 -->
+
+<suite name="suite3">
+     <test name="UserRemoveFromBookmarksTest(7)">
+         <classes>
+              <class name="com.swat.example.tests.UserAuthorizeTest"/>
+              <class name="com.swat.example.tests.UserRestaurantSearch"/>
+              <class name="com.swat.example.tests.UserRemoveFromBookmarksTest"/>
+          </classes>
+     </test>
+</suite>
