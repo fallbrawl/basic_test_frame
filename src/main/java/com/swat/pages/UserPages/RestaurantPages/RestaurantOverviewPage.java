@@ -135,7 +135,8 @@ public class RestaurantOverviewPage extends RestaurantSwitchPane {
         btnAddToBookmarks.click();
     }
 
-    public boolean isAddedToBookmarks(){
+    public boolean isAddedToBookmarks() throws InterruptedException {
+        Thread.sleep(500);
         System.out.print("Lol " + btnAddToBookmarks.getAttribute("class"));
         return btnAddToBookmarks.getAttribute("class").contains("active");
     }

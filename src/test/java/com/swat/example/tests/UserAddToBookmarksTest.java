@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
  */
 public class UserAddToBookmarksTest extends BaseTestCase {
     @Test
-    public void userAddToBookmarksTest() {
+    public void userAddToBookmarksTest() throws InterruptedException {
 
         SearchResultsPage searchResultsPage = BasePage.create(getDriver(), SearchResultsPage.class);
         RestaurantOverviewPage restaurantOverviewPage = searchResultsPage.openRestaurant();
